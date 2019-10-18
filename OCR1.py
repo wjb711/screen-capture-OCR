@@ -71,7 +71,10 @@ def win():
     # 设置窗口大小不可变
     Window.resizable(width=False, height=False)
     # Button 按钮 , button(窗口， 内容， 执行的函数名) pack():表示在窗口显示
-    tkinter.Button(Window, text="捷德OCR", command=getScanResult).pack()
+    #服务器识别使用这句
+    #tkinter.Button(Window, text="捷德OCR", command=getScanResult).pack()
+    #本地识别使用这句command=OCR
+    tkinter.Button(Window, text="捷德OCR", command=OCR).pack()
     # 消息循环
     Window.mainloop()
 
